@@ -4,6 +4,16 @@ parameters:
     #parameter_name: value
 
 services:
-    #service_name:
-    #    class: AppBundle\Directory\ClassName
-    #    arguments: ['@another_service_name', 'plain_value', '%parameter_name%']
+  appbundle.moduleList:
+      class: AppBundle\Admin\moduleAdmin
+      arguments: [~, AppBundle\Entity\moduleList, ~]
+      tags:
+          - { name: sonata.admin, manager_type: orm, label: Modulos }
+      public: true
+
+  appbundle.aulaList:
+      class: AppBundle\Admin\aulaAdmin
+      arguments: [~, AppBundle\Entity\aulaList, ~]
+      tags:
+          - { name: sonata.admin, manager_type: orm, label: Aulas }
+      public: true
