@@ -13,6 +13,7 @@ class aulaAdmin extends AbstractAdmin
   protected function configureFormFields(FormMapper $formMapper)
   {
     $formMapper->add('module','sonata_type_model_list', array())
+                ->add('floor','sonata_type_model_list', array())
                     // ->add('module','sonata_type_model_autocomplete', array(
                     //     'property'=>'moduleName',
                     //     'multiple'=>'false',
@@ -22,6 +23,7 @@ class aulaAdmin extends AbstractAdmin
                     //      },
                     // ))
                    ->add('aulaName', TextType::class);
+
   }
   protected function configureDatagridFilters(DatagridMapper $datagridMapper)
   {
@@ -32,6 +34,7 @@ class aulaAdmin extends AbstractAdmin
     $listMapper->addIdentifier('id')
       ->add('aulaName')
       ->add('module.moduleName')
+      ->add('floor.floor')
       ->add('module.id');
   }
 }

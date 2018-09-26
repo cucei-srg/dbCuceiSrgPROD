@@ -17,3 +17,10 @@ services:
       tags:
           - { name: sonata.admin, manager_type: orm, label: Aulas, group: Módulos & Aulas }
       public: true
+
+  appbundle.floorList:
+      class: AppBundle\Admin\floorAdmin
+      arguments: [~, AppBundle\Entity\floorList, ~]
+      tags:
+          - { name: sonata.admin, manager_type: orm, label: Pisos, group: Módulos & Aulas }
+      public: true

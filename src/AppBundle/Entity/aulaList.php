@@ -20,6 +20,11 @@ class aulaList
     */
     private $module;
     /**
+    * @ORM\ManyToOne(targetEntity="floorList")
+    * @ORM\JoinColumn(name="floor_id", referencedColumnName="id")
+    */
+    private $floor;
+    /**
     * @ORM\Column(type="string")
     */
     private $aulaName;
@@ -71,6 +76,31 @@ class aulaList
 
         return $this;
     }
+
+    /**
+     * Get the value of Id
+     *
+     * @return mixed
+     */
+    public function getFloor()
+    {
+        return $this->floor;
+    }
+
+    /**
+     * Set the value of Id
+     *
+     * @param mixed id
+     *
+     * @return self
+     */
+    public function setFloor($floor)
+    {
+        $this->floor = $floor;
+
+        return $this;
+    }
+
 
     /**
      * Get the value of Aula Name
