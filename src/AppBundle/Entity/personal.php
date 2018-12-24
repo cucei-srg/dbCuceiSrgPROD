@@ -7,13 +7,13 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class personal
 {
-/**
+  /**
   * @ORM\Id
   * @ORM\Column(type="integer")
   * @ORM\GeneratedValue(strategy="AUTO")
   */
   private $id;
-/**
+  /**
   * @ORM\Column(type="string", length=30, nullable=false)
   */
   private $nombre;
@@ -25,18 +25,22 @@ class personal
   * @ORM\Column(type="string", length=30, nullable=true)
   */
   private $aMaterno;
-/**
+  /**
   * @ORM\Column(type="string", length=30, nullable=false)
   */
   private $correo;
-/**
+  /**
   * @ORM\Column(type="integer", length=30, nullable=false)
   */
   private $status;
-/**
+  /**
   * @ORM\Column(type="blob", nullable=true)
   */
   private $fotografia;
+  /**
+  * @ORM\Column(type="string", length=200, nullable=true)
+  */
+  private $token;
 
   /**
      * Get the value of Id
@@ -198,6 +202,30 @@ class personal
     public function setFotografia($fotografia)
     {
         $this->fotografia = $fotografia;
+
+        return $this;
+    }
+
+     /**
+     * Get the value of token
+     *
+     * @return mixed
+     */
+    public function getToken()
+    {
+        return $this->token;
+    }
+
+    /**
+     * Set the value of token
+     *
+     * @param mixed token
+     *
+     * @return self
+     */
+    public function setToken($token)
+    {
+        $this->token = $token;
 
         return $this;
     }

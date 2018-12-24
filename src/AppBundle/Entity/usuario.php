@@ -25,10 +25,14 @@ class usuario
   * @ORM\Column(type="string", length=30, nullable=true)
   */
   private $aMaterno;
-/**
+  /**
   * @ORM\Column(type="string", length=30, nullable=false)
   */
   private $correo;
+  /**
+  * @ORM\Column(type="string", length=200, nullable=true)
+  */
+  private $token;
 
   /**
      * Get the value of Id
@@ -146,6 +150,30 @@ class usuario
     public function setCorreo($correo)
     {
         $this->correo = $correo;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of token
+     *
+     * @return mixed
+     */
+    public function getToken()
+    {
+        return $this->token;
+    }
+
+    /**
+     * Set the value of token
+     *
+     * @param mixed token
+     *
+     * @return self
+     */
+    public function setToken($token)
+    {
+        $this->token = $token;
 
         return $this;
     }
