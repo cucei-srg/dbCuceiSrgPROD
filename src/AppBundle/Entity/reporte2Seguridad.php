@@ -882,6 +882,4 @@ class reporte2Seguridad
  
         return $this;
     }
-    
-
 }

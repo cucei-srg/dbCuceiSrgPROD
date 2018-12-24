@@ -34,6 +34,15 @@ class reporteManten
   */
   private $fechaRecepcion;
   /**
+  * @ORM\Column(type="date", nullable=true)
+  */
+  private $fechaAsignacion;
+  /**
+  * @ORM\Column(type="date", nullable=true)
+  */
+  private $fechaReparacion;
+
+  /**
   * @ORM\Column(type="string", length=30, nullable=false)
   */
   private $nombre;
@@ -57,6 +66,10 @@ class reporteManten
   * @ORM\Column(type="string", length=100, nullable=false)
   */
   private $ubicacionServicio;
+  /**
+  * @ORM\Column(type="string", length=100, nullable=false)
+  */
+  private $anotacionExtra;
   /**
   * @ORM\Column(type="integer", length=50, nullable=false)
   */
@@ -186,6 +199,54 @@ class reporteManten
     public function setFechaRecepcion($fechaRecepcion)
     {
         $this->fechaRecepcion = $fechaRecepcion;
+
+        return $this;
+    }
+
+     /**
+     * Get the value of fechaAsignacion
+     *
+     * @return mixed
+     */
+    public function getFechaAsignacion()
+    {
+        return $this->fechaAsignacion;
+    }
+
+    /**
+     * Set the value of fechaAsignacion
+     *
+     * @param mixed fechaAsignacion
+     *
+     * @return self
+     */
+    public function setFechaAsignacion($fechaAsignacion)
+    {
+        $this->fechaAsignacion = $fechaAsignacion;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of fechaReparacion
+     *
+     * @return mixed
+     */
+    public function getFechaReparacion()
+    {
+        return $this->fechaReparacion;
+    }
+
+    /**
+     * Set the value of fechaReparacion
+     *
+     * @param mixed fechaReparacion
+     *
+     * @return self
+     */
+    public function setFechaReparacion($fechaReparacion)
+    {
+        $this->fechaReparacion = $fechaReparacion;
 
         return $this;
     }
@@ -335,6 +396,30 @@ class reporteManten
     }
 
      /**
+     * Get the value of anotacionExtra
+     *
+     * @return mixed
+     */
+    public function getAnotacionExtra()
+    {
+        return $this->anotacionExtra;
+    }
+
+    /**
+     * Set the value of anotacionExtra
+     *
+     * @param mixed anotacionExtra
+     *
+     * @return self
+     */
+    public function setAnotacionExtra($anotacionExtra)
+    {
+        $this->anotacionExtra = $anotacionExtra;
+
+        return $this;
+    }
+
+     /**
      * Get the value of DescripcionServicio
      *
      * @return mixed
@@ -406,4 +491,3 @@ class reporteManten
         return $this;
     }
 }
-?>

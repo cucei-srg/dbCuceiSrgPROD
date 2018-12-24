@@ -26,7 +26,10 @@ class statusReporte
     * @ORM\JoinColumn(name="idStatus", referencedColumnName="id")
     */
     private $idStatus;
-
+/**
+  * @ORM\Column(type="string", length=200, nullable=true)
+  */
+  private $observacionStatus;
 
     /**
      * Get the value of Id
@@ -96,6 +99,30 @@ class statusReporte
     public function setIdStatus($idStatus)
     {
         $this->idStatus = $idStatus;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of observacionStatus
+     *
+     * @return mixed
+     */
+    public function getObservacionStatus()
+    {
+        return $this->observacionStatus;
+    }
+
+    /**
+     * Set the value of observacionStatus
+     *
+     * @param mixed observacionStatus
+     *
+     * @return self
+     */
+    public function setObservacionStatus($observacionStatus)
+    {
+        $this->observacionStatus = $observacionStatus;
 
         return $this;
     }
