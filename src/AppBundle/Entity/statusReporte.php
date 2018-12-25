@@ -3,6 +3,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use AppBundle\Entity\usuario;
 use AppBundle\Entity\status;
+use AppBundle\Entity\reporteManten;
 /**
  * @ORM\Entity
  * @ORM\Table(name="statusReporte")
@@ -16,16 +17,21 @@ class statusReporte
   */
   private $id;
 /**
-    * @ORM\ManyToOne(targetEntity="usuario")
+    * @ORM\OneToOne(targetEntity="usuario")
     * @ORM\JoinColumn(name="idUsuario", referencedColumnName="id")
     */
     private $idUsuario;
 
 /**
-    * @ORM\ManyToOne(targetEntity="status")
+    * @ORM\OneToOne(targetEntity="status")
     * @ORM\JoinColumn(name="idStatus", referencedColumnName="id")
     */
     private $idStatus;
+    /**
+    * @ORM\OneToOne(targetEntity="reporteManten")
+    * @ORM\JoinColumn(name="folio", referencedColumnName="folio")
+    */
+    private $folio;
 /**
   * @ORM\Column(type="string", length=200, nullable=true)
   */
