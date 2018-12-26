@@ -26,7 +26,7 @@ class personal
   */
   private $aMaterno;
   /**
-  * @ORM\Column(type="string", length=30, nullable=false)
+  * @ORM\Column(type="string", length=60, nullable=false)
   */
   private $correo;
   /**
