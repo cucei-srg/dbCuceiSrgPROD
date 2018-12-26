@@ -17,18 +17,18 @@ class statusReporte
   */
   private $id;
 /**
-    * @ORM\OneToOne(targetEntity="usuario")
+    * @ORM\ManyToOne(targetEntity="usuario")
     * @ORM\JoinColumn(name="idUsuario", referencedColumnName="id")
     */
     private $idUsuario;
 
 /**
-    * @ORM\OneToOne(targetEntity="status")
+    * @ORM\ManyToOne(targetEntity="status")
     * @ORM\JoinColumn(name="idStatus", referencedColumnName="id")
     */
     private $idStatus;
     /**
-    * @ORM\OneToOne(targetEntity="reporteManten")
+    * @ORM\ManyToOne(targetEntity="reporteManten")
     * @ORM\JoinColumn(name="folio", referencedColumnName="folio")
     */
     private $folio;
