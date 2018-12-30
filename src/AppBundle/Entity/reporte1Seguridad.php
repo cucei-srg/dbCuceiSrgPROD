@@ -2,7 +2,7 @@
 namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use AppBundle\Entity\usuario;
-use AppBundle\Entity\objetosReporte1Manten;
+use AppBundle\Entity\objetosReporte1Seguridad;
 /**
  * @ORM\Entity
  * @ORM\Table(name="reporte1Seguridad")

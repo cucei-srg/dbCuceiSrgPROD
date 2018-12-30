@@ -1,12 +1,12 @@
 <?php
 namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
-use AppBundle\Entity\reporteManten;
+use AppBundle\Entity\reporte1Seguridad;
 /**
  * @ORM\Entity
- * @ORM\Table(name="objetosReporte1Manten")
+ * @ORM\Table(name="objetosReporte1Seguridad")
  */
-class objetosReporte1Manten
+class objetosReporte1Seguridad
 {
 /**
   * @ORM\Id
@@ -15,8 +15,8 @@ class objetosReporte1Manten
   */
   private $id;
     /**
-    * @ORM\ManyToOne(targetEntity="reporteManten")
-    * @ORM\JoinColumn(name="folioReporte", referencedColumnName="folio")
+    * @ORM\ManyToOne(targetEntity="reporte1Seguridad")
+    * @ORM\JoinColumn(name="folioReporte", referencedColumnName="id")
     */
     private $folioReporte;
 /**
