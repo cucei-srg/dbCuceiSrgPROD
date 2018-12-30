@@ -34,10 +34,6 @@ class personal
   */
   private $status;
   /**
-  * @ORM\Column(type="blob", nullable=true)
-  */
-  private $fotografia;
-  /**
   * @ORM\Column(type="string", length=200, nullable=true)
   */
   private $token;
@@ -179,29 +175,6 @@ class personal
     public function setStatus($status)
     {
         $this->status = $status;
-
-        return $this;
-    }
-     /**
-     * Get the value of Fotografia
-     *
-     * @return mixed
-     */
-    public function getFotografia()
-    {
-        return $this->fotografia;
-    }
-
-    /**
-     * Set the value of Fotografia
-     *
-     * @param mixed fotografia
-     *
-     * @return self
-     */
-    public function setFotografia($fotografia)
-    {
-        $this->fotografia = $fotografia;
 
         return $this;
     }
