@@ -30,6 +30,10 @@ class usuario
   */
   private $correo;
   /**
+  * @ORM\Column(type="integer", length=30, nullable=false)
+  */
+  private $status;
+  /**
   * @ORM\Column(type="string", length=200, nullable=true)
   */
   private $token;
@@ -150,6 +154,29 @@ class usuario
     public function setCorreo($correo)
     {
         $this->correo = $correo;
+
+        return $this;
+    }
+    /**
+     * Get the value of status
+     *
+     * @return mixed
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Set the value of status
+     *
+     * @param mixed status
+     *
+     * @return self
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
 
         return $this;
     }
