@@ -60,10 +60,7 @@ class reporte1Seguridad
   * @ORM\Column(type="string",nullable=false)
   */
   private $hechos;
-  /**
-  * @ORM\Column(type="string", length=50, nullable=false)
-  */
-  private $nombreElemento;
+
 
    /**
      * Get the value of Id
@@ -373,30 +370,6 @@ class reporte1Seguridad
     public function setIdObjeto($idObjeto)
     {
         $this->idObjeto = $idObjeto;
-
-        return $this;
-    }
-
-     /**
-     * Get the value of NombreElemento
-     *
-     * @return mixed
-     */
-    public function getNombreElemento()
-    {
-        return $this->nombreElemento;
-    }
-
-    /**
-     * Set the value of NombreElemento
-     *
-     * @param mixed nombreElemento
-     *
-     * @return self
-     */
-    public function setNombreElemento($nombreElemento)
-    {
-        $this->nombreElemento = $nombreElemento;
 
         return $this;
     }
