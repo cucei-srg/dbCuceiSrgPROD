@@ -2,7 +2,7 @@
 namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use AppBundle\Entity\reporteManten;
-use AppBundle\Entity\personal;
+use AppBundle\Entity\encargadoList;
 /**
  * @ORM\Entity
  * @ORM\Table(name="encargado")
@@ -21,7 +21,7 @@ class encargado
     */
     private $folioReporte;
     /**
-    * @ORM\ManyToOne(targetEntity="personal")
+    * @ORM\ManyToOne(targetEntity="encargadoList")
     * @ORM\JoinColumn(name="idPersonal", referencedColumnName="id")
     */
     private $idPersonal;

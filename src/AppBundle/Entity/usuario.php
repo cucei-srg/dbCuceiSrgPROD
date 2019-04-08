@@ -37,6 +37,10 @@ class usuario
   * @ORM\Column(type="string", length=200, nullable=true)
   */
   private $token;
+  /**
+  * @ORM\Column(type="integer", length=10, nullable=true)
+  */
+  private $telefono;
 
   /**
      * Get the value of Id
@@ -201,6 +205,29 @@ class usuario
     public function setToken($token)
     {
         $this->token = $token;
+
+        return $this;
+    }
+    /**
+     * Get the value of telefono
+     *
+     * @return mixed
+     */
+    public function getTelefono()
+    {
+        return $this->telefono;
+    }
+
+    /**
+     * Set the value of telefono
+     *
+     * @param mixed telefono
+     *
+     * @return self
+     */
+    public function setTelefono($telefono)
+    {
+        $this->telefono = $telefono;
 
         return $this;
     }
