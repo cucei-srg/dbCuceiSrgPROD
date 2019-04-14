@@ -2,7 +2,7 @@
 namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use AppBundle\Entity\usuario;
-use AppBundle\Entity\institucion;
+use AppBundle\Entity\instituciones;
 /**
  * @ORM\Entity
  * @ORM\Table(name="reporte2Seguridad")
@@ -21,7 +21,7 @@ class reporte2Seguridad
     */
   private $idUsuario;
  /**
-    * @ORM\ManyToOne(targetEntity="usuario")
+    * @ORM\ManyToOne(targetEntity="instituciones")
     * @ORM\JoinColumn(name="idInstitucion", referencedColumnName="id")
     */
   private $idInstitucion;
@@ -68,11 +68,11 @@ class reporte2Seguridad
   */
   private $lugar;
 /**
-  * @ORM\Column(type="string", nullable=false)
+  * @ORM\Column(type="string",length=300, nullable=false)
   */
   private $descripcionSuceso;
 /**
-  * @ORM\Column(type="string",length=30, nullable=false)
+  * @ORM\Column(type="string",length=100, nullable=false)
   */
   private $tipoRobo;
 /**
@@ -84,31 +84,31 @@ class reporte2Seguridad
   */
   private $apariencia;
 /**
-  * @ORM\Column(type="string",length=20, nullable=true)
+  * @ORM\Column(type="string",length=30, nullable=true)
   */
   private $tez;
 /**
-  * @ORM\Column(type="string", length=20, nullable=true)
+  * @ORM\Column(type="string", length=30, nullable=true)
   */
   private $cabello;
 /**
-  * @ORM\Column(type="string", length=20, nullable=true)
+  * @ORM\Column(type="string", length=30, nullable=true)
   */
   private $ojos;
 /**
-  * @ORM\Column(type="string", nullable=true)
+  * @ORM\Column(type="string", length=30, nullable=true)
   */
   private $cara;
 /**
-  * @ORM\Column(type="string", length=20, nullable=true)
+  * @ORM\Column(type="string", length=30, nullable=true)
   */
   private $boca;
 /**
-  * @ORM\Column(type="string",length=20, nullable=true)
+  * @ORM\Column(type="string",length=50, nullable=true)
   */
   private $tipoRopa;
 /**
-  * @ORM\Column(type="string", length=30, nullable=true)
+  * @ORM\Column(type="string", length=50, nullable=true)
   */
   private $objetoRostro;
 /**
@@ -116,27 +116,27 @@ class reporte2Seguridad
   */
   private $edadAprox;
 /**
-  * @ORM\Column(type="string",length=10, nullable=true)
+  * @ORM\Column(type="string",length=50, nullable=true)
   */
   private $cicatriz;
 /**
-  * @ORM\Column(type="string", length=30, nullable=true)
+  * @ORM\Column(type="string", length=50, nullable=true)
   */
   private $tatuaje;
 /**
-  * @ORM\Column(type="string",length=10, nullable=true)
+  * @ORM\Column(type="string",length=50, nullable=true)
   */
   private $piercing;
 /**
-  * @ORM\Column(type="string", nullable=true)
+  * @ORM\Column(type="string",length=100, nullable=true)
   */
   private $otro;
 /**
-  * @ORM\Column(type="string", length=100, nullable=true)
+  * @ORM\Column(type="string", length=250, nullable=true)
   */
   private $metodoHuida;
 /**
-  * @ORM\Column(type="string", nullable=true)
+  * @ORM\Column(type="string", length=250, nullable=true)
   */
   private $observaciones;
 
