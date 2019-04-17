@@ -38,7 +38,7 @@ class personal
   */
   private $token;
 /**
-  * @ORM\Column(type="integer", length=10, nullable=true)
+  * @ORM\Column(type="string", length=15, nullable=true)
   */
   private $telefono;
 
