@@ -34,7 +34,7 @@ class materialList
     */
     private $solicita;
     /**
-    * @ORM\Column(type="string", length=60, nullable=false)
+    * @ORM\Column(type="string", length=60, nullable=true)
     */
     private $material;
     /**
@@ -42,19 +42,19 @@ class materialList
     */
     private $catalogo;
     /**
-    * @ORM\Column(type="string", length=10, nullable=false)
+    * @ORM\Column(type="string", length=10, nullable=true)
     */
     private $unidad;
     /**
-    * @ORM\Column(type="integer", length=10, nullable=false)
+    * @ORM\Column(type="integer", length=10, nullable=true)
     */
     private $cantidadSolicitada;
     /**
-    * @ORM\Column(type="integer", length=10, nullable=false)
+    * @ORM\Column(type="integer", length=10, nullable=true)
     */
     private $cantidadRecibida;
     /**
-    * @ORM\Column(type="integer", length=10, nullable=false)
+    * @ORM\Column(type="string", length=10, nullable=true)
     */
     private $pendiente;
     /**
@@ -70,7 +70,7 @@ class materialList
     */
     private $estatus;
     /**
-    * @ORM\Column(type="string", length=250, nullable=false)
+    * @ORM\Column(type="string", length=250, nullable=true)
     */
     private $observaciones;
     
