@@ -60,6 +60,10 @@ class reporte1Seguridad
   * @ORM\Column(type="string",nullable=false)
   */
   private $hechos;
+/**
+  * @ORM\Column(type="string", length=60, nullable=false)
+  */
+  private $correo;
 
 
    /**
@@ -370,6 +374,29 @@ class reporte1Seguridad
     public function setIdObjeto($idObjeto)
     {
         $this->idObjeto = $idObjeto;
+
+        return $this;
+    }
+    /**
+     * Get the value of Correo
+     *
+     * @return mixed
+     */
+    public function getCorreo()
+    {
+        return $this->correo;
+    }
+
+    /**
+     * Set the value of Correo
+     *
+     * @param mixed correo
+     *
+     * @return self
+     */
+    public function setCorreo($correo)
+    {
+        $this->correo = $correo;
 
         return $this;
     }
