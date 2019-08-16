@@ -82,6 +82,10 @@ class reporteManten
   * @ORM\Column(type="blob", nullable=true)
   */
   private $fotografia;
+  /**
+  * @ORM\Column(type="string", length=60, nullable=false)
+  */
+  private $correo;
 
    /**
      * Get the value of Folio
@@ -487,6 +491,29 @@ class reporteManten
     public function setFotografia($fotografia)
     {
         $this->fotografia = $fotografia;
+
+        return $this;
+    }
+        /**
+     * Get the value of Correo
+     *
+     * @return mixed
+     */
+    public function getCorreo()
+    {
+        return $this->correo;
+    }
+
+    /**
+     * Set the value of Correo
+     *
+     * @param mixed correo
+     *
+     * @return self
+     */
+    public function setCorreo($correo)
+    {
+        $this->correo = $correo;
 
         return $this;
     }
