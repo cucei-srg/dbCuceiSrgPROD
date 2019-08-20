@@ -83,7 +83,7 @@ class reporteManten
   */
   private $fotografia;
   /**
-  * @ORM\Column(type="string", length=60, nullable=false)
+  * @ORM\Column(type="string", length=100, nullable=false)
   */
   private $correo;
 
