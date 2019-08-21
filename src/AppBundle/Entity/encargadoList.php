@@ -22,7 +22,7 @@ class encargadoList
   */
   private $aPaterno;
 /**
-  * @ORM\Column(type="string", length=30, nullable=false)
+  * @ORM\Column(type="string", length=30, nullable=true)
   */
   private $aMaterno;
   /**
