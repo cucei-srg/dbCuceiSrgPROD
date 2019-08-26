@@ -41,6 +41,10 @@ class personal
   * @ORM\Column(type="string", length=15, nullable=true)
   */
   private $telefono;
+/**
+  * @ORM\Column(type="string", length=60, nullable=true)
+  */
+  private $motivoBaja;
 
   /**
      * Get the value of Id
@@ -227,6 +231,29 @@ class personal
     public function setTelefono($telefono)
     {
         $this->telefono = $telefono;
+
+        return $this;
+    }
+     /**
+     * Get the value of motivoBaja
+     *
+     * @return mixed
+     */
+    public function getmotivoBaja()
+    {
+        return $this->motivoBaja;
+    }
+
+    /**
+     * Set the value of motivoBaja
+     *
+     * @param mixed motivoBaja
+     *
+     * @return self
+     */
+    public function setmotivoBaja($motivoBaja)
+    {
+        $this->motivoBaja = $motivoBaja;
 
         return $this;
     }
