@@ -55,7 +55,7 @@ class reporteManten
   */
   private $aMaterno;
   /**
-  * @ORM\Column(type="integer", nullable=false)
+  * @ORM\Column(type="string", length=15, nullable=false)
   */
   private $telefono;
  /**
